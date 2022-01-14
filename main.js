@@ -19,6 +19,14 @@ $http.afterRequest = function () {
 uni.hideLoading()
 }
 
+uni.$showMessage = function(title = 'failed to fetch information',duration= 1500){
+  uni.showToast({
+    title,
+    duration,
+    icon: 'none',
+  })
+}
+
 Vue.config.productionTip = false
 
 App.mpType = 'app'
